@@ -1,0 +1,17 @@
+#ifndef DOGM162X_H
+#define DOGM162X_H
+
+#include <stdint.h>
+
+#define EXT_SPI_TRANSFER dogm162x_spi
+
+extern uint8_t EXT_SPI_TRANSFER(uint8_t c);
+
+void dogm162x_init(void);
+
+void dogm162x_puts(char* s);
+
+void dogm162x_putsPos(uint8_t x, uint8_t y, char* s);
+
+#endif //DOGM162X_H 
+
