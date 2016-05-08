@@ -47,12 +47,13 @@ FORMAT = ihex
 TARGET = main
 
 SRCDIR = ./src
+LIBDIR = ../src
 
 # List C source files here. (C dependencies are automatically generated.)
 SRC =   \
 main.c  \
  $(SRCDIR)/spi.c     \
- $(SRCDIR)/dogm162x.c    
+ $(LIBDIR)/dogm162x.c    
 
 
 

@@ -8,8 +8,8 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#include "spi.h"
-#include "dogm162x.h"
+#include "./inc/spi.h"
+#include "../inc/dogm162x.h"
 
 
 
