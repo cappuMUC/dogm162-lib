@@ -1,4 +1,4 @@
-#include "dogm162x.h"
+#include "../inc/dogm162x.h"
 #include <avr/io.h>
 #include <util/delay.h>
 
