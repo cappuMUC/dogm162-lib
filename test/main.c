@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -41,10 +42,13 @@
 uint8_t dogm162x_spi(uint8_t c);
 void dogm162xx_puts(uint8_t* c);
 
+void dogm_delay_us(void);
+void dogm_delay_ms(void);
 
 void main(void)
 {
-
+  char lcdBuf[17]={0};
+  uint16_t counter=0; 
   //set LED outputs
   LED_DDR |= (1 << LED_PIN);
 
@@ -67,12 +71,16 @@ void main(void)
   
   dogm162x_init();
   
-  dogm162xx_puts("    RATC[OS]   ");
-    
+  dogm162xx_puts("Hallo Welt!     ");
+  _delay_ms(1000);  
   while(1)
   {
+    sprintf(lcdBuf,"LCD Test: %5d ", counter);
+    dogm162x_gotoPos(0,0);
+    dogm162xx_puts(lcdBuf);
+    counter++;
     LED_TOGGLE(LED_PIN);
-    _delay_ms(500);
+    _delay_ms(100);
   }
 }
 
@@ -106,3 +114,12 @@ void dogm162xx_puts(uint8_t* c)
 }
 
 
+void dogm_delay_us(void)
+{
+    _delay_us(24);
+}
+
+void dogm_delay_ms(void)
+{
+    _delay_ms(200);
+}
