@@ -1,4 +1,4 @@
-#include "../inc/dogm162x.h"
+#include "dogm162x.h"
 
 #define CMD_WAIT_US  27
 #define CMD_WAIT_MS  200

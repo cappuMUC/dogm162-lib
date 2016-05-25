@@ -10,7 +10,7 @@
 #include <util/delay.h>
 
 #include "./inc/spi.h"
-#include "../inc/dogm162x.h"
+#include "../src/dogm162x.h"
 
 
 
