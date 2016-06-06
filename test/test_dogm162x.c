@@ -1,4 +1,5 @@
-#include ../src/dogm162x.h
+#include <unity.h>
+#include "../src/dogm162x.h"
 
 void test_firstTestChecksFrameworkIsDoingHisJob(void)
 {

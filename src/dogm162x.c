@@ -28,6 +28,10 @@
 
 //Commands have to be completed with a RS line toggle!!!
 
+void EXT_DELAY_200_MS() {};
+void EXT_DELAY_24_US() {};
+void EXT_SPI_TRANSFER(uint8_t c) {};
+
 
 static const char init_sequence[] = {0x39, 0x1C, 0x52, 0x69, 0x71, 
     0x3C, 0x0F, 0x01, 0x06};
